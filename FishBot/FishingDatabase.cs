@@ -60,23 +60,4 @@ public class FishingDatabase
         File.WriteAllText(_filePath, JsonConvert.SerializeObject(this, Formatting.Indented));
     }
 
-    public string GrabRandom()
-    {
-        var shuffledList = fishList.ToList();
-        shuffledList.Shuffle();
-
-        var rng = _random.NextDouble();
-        Console.WriteLine(rng);
-        double cumulativeProbability = 0f;
-        foreach (var fishRecord in shuffledList)
-        {
-            cumulativeProbability += fishRecord.Value;
-            if (rng <= cumulativeProbability)
-            {
-                return fishRecord.Key;
-            }
-        }
-
-        return "Sorry, no fish :(";
-    }
 }

@@ -36,7 +36,18 @@ public class FishBot
     {
         if (e.ChatMessage.Message.StartsWith("!fish"))
         {
-            client.SendMessage(e.ChatMessage.Channel, db.GrabRandom());
+            var message = db.fishList.GetRandom();
+
+            if (message is not null)
+            {
+                message.Replace("{user}", "@" + e.ChatMessage.DisplayName);
+            }
+            else
+            {
+                message = "Sorry, no fish :(";
+            }
+
+            client.SendMessage(e.ChatMessage.Channel, message);
         }
     }
 }

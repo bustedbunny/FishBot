@@ -1,12 +1,8 @@
-$HEADER$using System.Windows.Controls;
+using System.Windows.Controls;
 
-namespace $NAMESPACE$
+namespace UITest.MVVM.View;
+
+public partial class HomeView : UserControl
 {
-    public partial class $CLASS$ : UserControl
-    {
-        public $CLASS$()
-        {
-            InitializeComponent();
-        }
-    }
+    public HomeView() { InitializeComponent(); }
 }

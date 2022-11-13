@@ -1,6 +1,9 @@
 namespace UITest.MVVM.ViewModel;
 
-public class MainViewModel
+public class MainViewModel : ObservableObject
 {
-    
+    public MainViewModel()
+    {
+        
+    }
 }
