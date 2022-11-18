@@ -1,7 +1,6 @@
-﻿using FishBotMAUI.Services.Logging;
-using FishBotMAUI.ViewModel;
+﻿using FishBotMAUI.ViewModel;
 
-namespace FishBotMAUI
+namespace FishBotMAUI.Pages
 {
     public partial class StatusPage : ContentPage
     {

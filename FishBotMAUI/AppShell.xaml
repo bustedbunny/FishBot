@@ -8,7 +8,7 @@
     <TabBar>
 
         <ShellContent Title="Status"
-                      ContentTemplate="{DataTemplate local:StatusPage}"
+                      ContentTemplate="{DataTemplate pages:StatusPage}"
                       Route="StatusPage" />
 
         <ShellContent Title="Fish list"

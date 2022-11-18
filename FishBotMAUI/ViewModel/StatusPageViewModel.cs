@@ -12,7 +12,7 @@ namespace FishBotMAUI.ViewModel
 {
     public partial class StatusPageViewModel : ObservableObject
     {
-        private FishBotController _fishBot;
+        private readonly FishBotController _fishBot;
         private readonly Logger _logger;
         [ObservableProperty] private ObservableCollection<string> _logs;
 
@@ -48,7 +48,7 @@ namespace FishBotMAUI.ViewModel
         }
         private void OnConnectionError(object sender, OnConnectionErrorArgs e)
         {
-            _logger.Message($"Couldn't connect. {e.Error.ToString}");
+            _logger.Message($"Couldn't connect. {e.Error.ToString()}");
             OnPropertyChanged(nameof(IsConnected));
             OnPropertyChanged(nameof(IsNotConnected));
         }

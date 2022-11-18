@@ -7,6 +7,7 @@
     <projectFile kind="Uwp">FishBotMAUI/FishBotMAUI.csproj</projectFile>
     <projectFile kind="XamarinIOS">FishBotMAUI/FishBotMAUI.csproj</projectFile>
     <projectFile kind="XamarinMacOS">FishBotMAUI/FishBotMAUI.csproj</projectFile>
+    <projectFile pubXmlPath="FishBotMAUI/Properties/PublishProfiles/MSIX-win10-x64.pubxml">FishBotMAUI/FishBotMAUI.csproj</projectFile>
     <projectFile>Form/Form.csproj</projectFile>
     <projectFile>Forms/Forms.csproj</projectFile>
     <projectFile>UITest/UITest.csproj</projectFile>
@@ -15,22 +16,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="efb0cf66-34a8-4fdd-804c-a495dc7c834b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FishBot/.idea/riderMarkupCache.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FishBot/.idea/riderMarkupCache.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FishBot/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FishBot/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vs/FishBot/DesignTimeBuild/.dtbcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/FishBot/DesignTimeBuild/.dtbcache.v2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/FishBot/FileContentIndex/0318946b-cbf0-4753-a0f9-521e3280ccf5.vsidx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/FishBot/FileContentIndex/63b2b878-97b5-4ce3-a73a-3ae318f64b22.vsidx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/FishBot/FileContentIndex/849a84ec-671e-41d7-8da9-d49082c374ff.vsidx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/FishBot/FileContentIndex/d81564c8-ce27-41e5-9388-e0059ddd5b51.vsidx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.vs/FishBot/v17/.futdcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/FishBot/v17/.futdcache.v2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vs/FishBot/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/FishBot/v17/.suo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/FishBot/v17/.wsuo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/FishBot/v17/.wsuo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vs/ProjectEvaluation/fishbot.metadata.v5.2" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/ProjectEvaluation/fishbot.metadata.v5.2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vs/ProjectEvaluation/fishbot.projects.v5.2" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/ProjectEvaluation/fishbot.projects.v5.2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/VSWorkspaceState.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/VSWorkspaceState.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/slnx.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/slnx.sqlite" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FishBotMAUI/FishBotMAUI.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/FishBotMAUI/FishBotMAUI.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FishBotMAUI/FishBotMAUI.csproj.user" beforeDir="false" afterPath="$PROJECT_DIR$/FishBotMAUI/FishBotMAUI.csproj.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FishBotMAUI/Pages/FishPage.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/FishBotMAUI/Pages/FishPage.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FishBotMAUI/AppShell.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/FishBotMAUI/AppShell.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FishBotMAUI/Pages/StatusPage.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/FishBotMAUI/Pages/StatusPage.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FishBotMAUI/Pages/StatusPage.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FishBotMAUI/Pages/StatusPage.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FishBotMAUI/ViewModel/StatusPageViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FishBotMAUI/ViewModel/StatusPageViewModel.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,13 +34,21 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="master/master" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/341983a061644a6893bc310e00c7333e13a00/1c/2ef2fc03/TwitchClient.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/861e23c672704a4a8eca9c234af0cac552e590/f8/1ff95aed/EventArgs.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/575c31ecc35a636b6f962cb71d53992552941a18982aae1c8e6c16305cc3761b/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f2103c576aef635626cde2a8c1caee4f5b23ca724d7d5f17e13aeb1e04cad/Random.cs" root0="SKIP_HIGHLIGHTING" />
+    <option name="RESET_MODE" value="KEEP" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -66,7 +70,8 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "rider.run.widget.enabled.cache": "false",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors",
+    "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
     "rider.external.source.directories": [
@@ -77,6 +82,10 @@
   }
 }]]></component>
   <component name="RunManager" selected=".NET Launch Settings Profile.FishBotMAUI: Windows Machine">
+    <configuration name="FishBotMAUI: MSIX-win10-x64" type="DotNetMsBuildPublish" factoryName="Publish to IIS">
+      <riderPublish publish_profile="MSIX-win10-x64.pubxml" pubxml_path="$PROJECT_DIR$/FishBotMAUI/Properties/PublishProfiles/MSIX-win10-x64.pubxml" uuid_high="-1628705789380048077" uuid_low="-7153472597190638899" />
+      <method v="2" />
+    </configuration>
     <configuration name="DBEditor" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -200,6 +209,8 @@
       <workItem from="1658430072570" duration="1226000" />
       <workItem from="1668006982699" duration="10922000" />
       <workItem from="1668608755261" duration="214000" />
+      <workItem from="1668782207304" duration="680000" />
+      <workItem from="1668782903310" duration="28000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <created>1655650276115</created>
@@ -218,6 +229,9 @@
     <option name="localTasksCounter" value="3" />
     <servers />
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="Vcs.Log.Tabs.Properties">
@@ -225,7 +239,34 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="master" />
+                </option>
+              </RecentGroup>
+            </list>
           </value>
         </entry>
       </map>
