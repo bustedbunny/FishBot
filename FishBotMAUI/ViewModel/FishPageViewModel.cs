@@ -15,28 +15,11 @@ namespace FishBotMAUI.ViewModel
 {
     public partial class FishPageViewModel : ObservableObject
     {
-
-        public FishPageViewModel()
+        private readonly FishingDatabase _database;
+        public FishPageViewModel(FishingDatabase fishingDatabase)
         {
-
-            var assemblyPath = Assembly.GetExecutingAssembly().Location;
-            assemblyPath = Path.GetDirectoryName(assemblyPath);
-            Debug.Assert(assemblyPath != null, nameof(assemblyPath) + " != null");
-            var saveFilePath = Path.Combine(assemblyPath, "Settings.json");
-            var dbFilePath = Path.Combine(assemblyPath, "Database.json");
-
-            fishList.LoadDatabase(dbFilePath);
-
-            for (int i = 0; i < 5; i++)
-            {
-                fishList.Add(new FishRecord
-                {
-                    Name = $"Fish {i.ToString()}",
-                    Probability = i / 100
-                });
-            }
-
-
+            _database = fishingDatabase;
+            fishList = fishingDatabase.Content;
         }
 
         [ObservableProperty]
@@ -53,22 +36,7 @@ namespace FishBotMAUI.ViewModel
                 return;
             }
 
-            var fish = new FishRecord { Name = EntryName, Probability = EntryProbability };
-
-            var exists = FishList.Any(x =>
-            {
-                x.Probability = fish.Probability;
-                return x.Name.Equals(fish.Name);
-            });
-
-            if (exists)
-            {
-                await Shell.Current.DisplayAlert("Error", $"{fish.Name} already exists. Updating probability.", "OK");
-            }
-            else
-            {
-                FishList.Add(fish);
-            }
+            _database.AddRecord(EntryName, EntryProbability);
         }
 
 

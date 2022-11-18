@@ -7,14 +7,17 @@
 
     <TabBar>
 
-        <ShellContent Title="Home"
-                      ContentTemplate="{DataTemplate local:MainPage}"
-                      Route="MainPage" />
+        <ShellContent Title="Status"
+                      ContentTemplate="{DataTemplate local:StatusPage}"
+                      Route="StatusPage" />
 
         <ShellContent Title="Fish list"
                       ContentTemplate="{DataTemplate pages:FishPage}"
                       Route="FishPage" />
 
+        <ShellContent Title="Settings"
+                      ContentTemplate="{DataTemplate pages:SettingsPage}"
+                      Route="SettingsPage" />
     </TabBar>
 
 </Shell>

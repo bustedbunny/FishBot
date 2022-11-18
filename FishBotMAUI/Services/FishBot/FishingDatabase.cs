@@ -1,3 +1,4 @@
+using FishBotMAUI.Services.Logging;
 using Newtonsoft.Json;
 using System.Collections.ObjectModel;
 
@@ -46,36 +47,67 @@ public static class FishingDatabaseUtility
 [Serializable]
 public class FishingDatabase
 {
-    public ObservableCollection<FishRecord> fishList = new();
+    private readonly string DatabaseName = "FishDatabase.json";
+    private readonly string DatabasePath;
+    private readonly Logger _logger;
 
-    public void Save(string filePath)
+
+    private int _version;
+    public int Version => _version;
+    public FishingDatabase(Logger logger)
     {
-        File.WriteAllText(filePath, JsonConvert.SerializeObject(this, Formatting.Indented));
+        _logger = logger;
+
+        DatabasePath = Path.Combine(FileSystem.AppDataDirectory, DatabaseName);
+
+#if DEBUG
+        _logger.Message(DatabasePath);
+#endif
+
+        if (File.Exists(DatabasePath))
+        {
+            var rawJson = File.ReadAllText(DatabasePath);
+            Content = JsonConvert.DeserializeObject<ObservableCollection<FishRecord>>(rawJson);
+
+            _logger.Message($"Loaded database. It's count is {Content.Count}.");
+        }
+        else
+        {
+            Content = new();
+
+            _logger.Message("No database found, creating new empty.");
+        }
+    }
+
+    public readonly ObservableCollection<FishRecord> Content;
+
+    public void Save()
+    {
+        File.WriteAllText(DatabasePath, JsonConvert.SerializeObject(Content, Formatting.Indented));
     }
 
     public void AddRecord(string name, float probability)
     {
-        for (int i = 0; i < fishList.Count; i++)
+        for (int i = 0; i < Content.Count; i++)
         {
-            if (fishList[i].Name.Equals(name))
+            if (Content[i].Name.Equals(name))
             {
-                fishList[i] = new FishRecord { Name = name, Probability = probability };
-                Console.WriteLine("Fish with that name already exists. Overriding probability");
+                Content[i] = new FishRecord { Name = name, Probability = probability };
+                _logger.Message("Fish with that name already exists. Overriding probability");
                 return;
             }
         }
 
-        fishList.Add(new FishRecord
+        Content.Add(new FishRecord
         {
             Name = name,
             Probability = probability
         });
 
-        Console.WriteLine($"Added {name} with {probability} probability successfully.");
+        _logger.Message($"Added {name} with {probability} probability successfully.");
+
+        _version++;
+
+        Save();
     }
-
-
-
-
-
 }

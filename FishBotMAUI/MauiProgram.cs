@@ -1,5 +1,11 @@
-﻿using FishBotMAUI.Pages;
+﻿using FishBot;
+using FishBotMAUI.Pages;
+using FishBotMAUI.Services.FishBot;
+using FishBotMAUI.Services.Logging;
 using FishBotMAUI.ViewModel;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
+using System.Runtime.CompilerServices;
 
 namespace FishBotMAUI
 {
@@ -18,11 +24,20 @@ namespace FishBotMAUI
 
             var services = builder.Services;
 
-            services.AddSingleton<MainPage>();
-            services.AddSingleton<MainPageViewModel>();
+            services.AddSingleton<Logger>();
+            services.AddSingleton<FishingDatabase>();
+            services.AddSingleton<CredentialSettings>();
+            services.AddSingleton<FishBotController>();
 
-            services.AddSingleton<FishPage>();
+
+            services.AddSingleton<StatusPageViewModel>();
+            services.AddSingleton<StatusPage>();
+
+            services.AddSingleton<SettingsPageViewModel>();
+            services.AddSingleton<SettingsPage>();
+
             services.AddSingleton<FishPageViewModel>();
+            services.AddSingleton<FishPage>();
 
             return builder.Build();
         }

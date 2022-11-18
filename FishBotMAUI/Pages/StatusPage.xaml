@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FishBotMAUI.StatusPage"
+             xmlns:viewmodel="clr-namespace:FishBotMAUI.ViewModel"
+             x:DataType="viewmodel:StatusPageViewModel"
+             Title="Status">
+
+    <Grid RowDefinitions="Auto, *"
+          RowSpacing="20">
+
+        <Grid RowDefinitions="Auto,Auto"
+              RowSpacing="10"
+              HorizontalOptions="End"
+              Padding="20">
+
+            <Button Text="Connect"
+                    Command="{Binding ConnectCommand}"
+                    WidthRequest="128"
+                    IsVisible="{Binding IsNotConnected}" />
+
+            <Button Text="Disconnect"
+                    Command="{Binding DisconnectCommand}"
+                    WidthRequest="128"
+                    IsVisible="{Binding IsConnected}" />
+
+            <HorizontalStackLayout Grid.Row="1"
+                                   VerticalOptions="Start"
+                                   HorizontalOptions="Start"
+                                   Spacing="10">
+                <Label Text="Status: Connected"
+                       IsVisible="{Binding IsConnected}" />
+                <Image HeightRequest="16"
+                       WidthRequest="16"
+                       Aspect="AspectFill"
+                       Source="hypers.gif"
+                       IsAnimationPlaying="True"
+                       IsVisible="{Binding IsConnected}" />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Grid.Row="1"
+                                   VerticalOptions="Start"
+                                   HorizontalOptions="Start"
+                                   Spacing="10">
+                <Label Grid.Row="1"
+                       Text="Status: Disconnected"
+                       IsVisible="{Binding IsNotConnected}" />
+                <Image HeightRequest="16"
+                       WidthRequest="16"
+                       Aspect="AspectFill"
+                       Source="sleepy.png"
+                       IsVisible="{Binding IsNotConnected}" />
+            </HorizontalStackLayout>
+
+        </Grid>
+
+        <Frame Grid.Row="1"
+               BorderColor="White">
+            <CollectionView ItemsSource="{Binding Logs}"
+                            VerticalOptions="End">
+
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical"
+                                       ItemSpacing="0" />
+                </CollectionView.ItemsLayout>
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="x:String">
+                        <Label Text="{Binding .}"
+                               BackgroundColor="Grey"
+                               Margin="0" />
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+
+            </CollectionView>
+        </Frame>
+
+    </Grid>
+
+</ContentPage>

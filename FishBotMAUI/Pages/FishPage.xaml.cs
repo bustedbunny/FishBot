@@ -9,7 +9,5 @@ public partial class FishPage : ContentPage
     {
         InitializeComponent();
         BindingContext = vm;
-
-
     }
 }

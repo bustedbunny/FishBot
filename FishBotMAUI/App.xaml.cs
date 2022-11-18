@@ -1,4 +1,6 @@
-﻿namespace FishBotMAUI
+﻿using System.Diagnostics;
+
+namespace FishBotMAUI
 {
     public partial class App : Application
     {
@@ -7,6 +9,8 @@
             InitializeComponent();
 
             MainPage = new AppShell();
+
+
         }
 
         protected override Window CreateWindow(IActivationState activationState)
@@ -18,7 +22,14 @@
             window.Deactivated += OnWindowDeactivation;
 #endif
 
+            window.Destroying += OnWindowDestroying;
+
             return window;
+        }
+
+        private void OnWindowDestroying(object sender, EventArgs e)
+        {
+            Debug.WriteLine("Kek");
         }
 #if WINDOWS
 
