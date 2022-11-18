@@ -39,6 +39,7 @@
 		<PackageIcon>angie.png</PackageIcon>
 		<Company>Busted Bunny Productions</Company>
 		<Authors>busted_bunny</Authors>
+		<RepositoryUrl>https://github.com/bustedbunny/FishBot</RepositoryUrl>
 	</PropertyGroup>
 
 	<ItemGroup>

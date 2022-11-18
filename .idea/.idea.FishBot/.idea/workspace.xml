@@ -16,17 +16,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="efb0cf66-34a8-4fdd-804c-a495dc7c834b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FishBot/.idea/riderMarkupCache.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FishBot/.idea/riderMarkupCache.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FishBot/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FishBot/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/FishBot/DesignTimeBuild/.dtbcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/FishBot/DesignTimeBuild/.dtbcache.v2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/FishBot/v17/.futdcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/FishBot/v17/.futdcache.v2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/FishBot/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/FishBot/v17/.suo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/ProjectEvaluation/fishbot.metadata.v5.2" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/ProjectEvaluation/fishbot.metadata.v5.2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/ProjectEvaluation/fishbot.projects.v5.2" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/ProjectEvaluation/fishbot.projects.v5.2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FishBotMAUI/AppShell.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/FishBotMAUI/AppShell.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FishBotMAUI/Pages/StatusPage.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/FishBotMAUI/Pages/StatusPage.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FishBotMAUI/Pages/StatusPage.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FishBotMAUI/Pages/StatusPage.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FishBotMAUI/ViewModel/StatusPageViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FishBotMAUI/ViewModel/StatusPageViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FishBotMAUI/Pages/SettingsPage.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FishBotMAUI/Pages/SettingsPage.xaml.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,11 +40,16 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="KEEP" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock://F:/VisualStudioRepos/FishBot/FishBotMAUI/AppShell.xaml" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://F:/VisualStudioRepos/FishBot/FishBotMAUI/ViewModel/StatusPageViewModel.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="SWEA" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2AlDPX8JFkIJKdRpI6Cpcpbd4LO" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -70,7 +65,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "rider.run.widget.enabled.cache": "false",
-    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors",
+    "settings.editor.selected.configurable": "preferences.sourceCode.C#",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -210,7 +205,7 @@
       <workItem from="1668006982699" duration="10922000" />
       <workItem from="1668608755261" duration="214000" />
       <workItem from="1668782207304" duration="680000" />
-      <workItem from="1668782903310" duration="28000" />
+      <workItem from="1668782903310" duration="222000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <created>1655650276115</created>
@@ -226,7 +221,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655650584165</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Small fixes">
+      <created>1668782974155</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1668782974155</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -275,7 +277,8 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Init" />
-    <option name="LAST_COMMIT_MESSAGE" value="Init" />
+    <MESSAGE value="Small fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Small fixes" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

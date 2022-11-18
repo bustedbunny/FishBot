@@ -43,7 +43,7 @@ namespace FishBotMAUI.Services.FishBot
 
                 if (message is not null)
                 {
-                    message.Replace("{user}", "@" + e.ChatMessage.DisplayName);
+                    message = message.Replace("{user}", "@" + e.ChatMessage.DisplayName);
                 }
                 else
                 {
