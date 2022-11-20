@@ -6,14 +6,14 @@
   xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
   IgnorableNamespaces="uap rescap">
 
-  <Identity Name="maui-package-name-placeholder" Publisher="CN=busted_bunny" Version="0.1.0.0" />
+  <Identity Name="FishBot" Publisher="CN=busted_bunny" Version="0.1.16.0" />
 
   <mp:PhoneIdentity PhoneProductId="5F4AEC10-375D-4FD4-B9E7-B67CECA85A13" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
-    <DisplayName>$placeholder$</DisplayName>
-    <PublisherDisplayName>User Name</PublisherDisplayName>
-    <Logo>$placeholder$.png</Logo>
+    <DisplayName>FishBot</DisplayName>
+    <PublisherDisplayName>busted_bunny</PublisherDisplayName>
+    <Logo>Resources\AppIcon\PackageLogo.png</Logo>
   </Properties>
 
   <Dependencies>
@@ -28,13 +28,13 @@
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="$targetentrypoint$">
       <uap:VisualElements
-        DisplayName="$placeholder$"
+        DisplayName="FishBot"
         Description="$placeholder$"
-        Square150x150Logo="$placeholder$.png"
-        Square44x44Logo="$placeholder$.png"
+        Square150x150Logo="Resources\AppIcon\MediumTile.png"
+        Square44x44Logo="Resources\AppIcon\AppIcon.png"
         BackgroundColor="transparent">
-        <uap:DefaultTile Square71x71Logo="$placeholder$.png" Wide310x150Logo="$placeholder$.png" Square310x310Logo="$placeholder$.png" />
-        <uap:SplashScreen Image="$placeholder$.png" />
+        <uap:DefaultTile Square71x71Logo="Resources\AppIcon\SmallTile.png" Wide310x150Logo="Resources\AppIcon\WideTile.png" Square310x310Logo="Resources\AppIcon\LargeTile.png" />
+        <uap:SplashScreen Image="Resources\AppIcon\SplashScreen.png" />
       </uap:VisualElements>
     </Application>
   </Applications>

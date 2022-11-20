@@ -8,8 +8,17 @@
     <DefaultDevice>pixel_5_-_api_28</DefaultDevice>
     <UapAppxPackageBuildMode>SideloadOnly</UapAppxPackageBuildMode>
     <AppxShowAllApps>False</AppxShowAllApps>
-    <_LastSelectedProfileId>MSIX-win10-x64.pubxml</_LastSelectedProfileId>
-    <PackageOptionalProjectsInIdeBuilds>False</PackageOptionalProjectsInIdeBuilds>
+    <_LastSelectedProfileId>F:\VisualStudioRepos\FishBot\FishBotMAUI\Properties\PublishProfiles\MSIX-win10-x64.pubxml</_LastSelectedProfileId>
+    <PackageOptionalProjectsInIdeBuilds>True</PackageOptionalProjectsInIdeBuilds>
+    <AppxBuildConfigurationSelection>neutral</AppxBuildConfigurationSelection>
+    <Source>F:\VisualStudioRepos\FishBot\FishBotMAUI\Resources\Images\angie.png</Source>
+    <SmallTileSource>F:\VisualStudioRepos\FishBot\FishBotMAUI\Resources\Images\angie.png</SmallTileSource>
+    <MediumTileSource>F:\VisualStudioRepos\FishBot\FishBotMAUI\Resources\Images\angie.png</MediumTileSource>
+    <WideTileSource>F:\VisualStudioRepos\FishBot\FishBotMAUI\Resources\Images\angie.png</WideTileSource>
+    <LargeTileSource>F:\VisualStudioRepos\FishBot\FishBotMAUI\Resources\Images\angie.png</LargeTileSource>
+    <AppIconSource>F:\VisualStudioRepos\FishBot\FishBotMAUI\Resources\Images\angie.png</AppIconSource>
+    <SplashScreenSource>F:\VisualStudioRepos\FishBot\FishBotMAUI\Resources\Images\angie.png</SplashScreenSource>
+    <PackageLogoSource>F:\VisualStudioRepos\FishBot\FishBotMAUI\Resources\Images\angie.png</PackageLogoSource>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net6.0-android|AnyCPU'">
     <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
@@ -20,6 +29,11 @@
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net6.0-maccatalyst|AnyCPU'">
     <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
   </PropertyGroup>
+  <ItemGroup>
+    <AppxManifest Update="Platforms\Windows\Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+  </ItemGroup>
   <ItemGroup>
     <MauiXaml Update="Pages\SettingsPage.xaml">
       <SubType>Designer</SubType>

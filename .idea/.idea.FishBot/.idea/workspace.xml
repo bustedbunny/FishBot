@@ -14,9 +14,29 @@
     <projectFile>UwpApplication1/UwpApplication1.csproj</projectFile>
     <projectFile>WPFApp/WPFApp.csproj</projectFile>
   </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="efb0cf66-34a8-4fdd-804c-a495dc7c834b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/FishBotMAUI/Pages/SettingsPage.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FishBotMAUI/Pages/SettingsPage.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FishBot/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FishBot/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/FishBot/DesignTimeBuild/.dtbcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/FishBot/DesignTimeBuild/.dtbcache.v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/FishBot/FileContentIndex/1693da34-761e-4f57-87b2-c4d328be72f8.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/FishBot/FileContentIndex/b3a81c26-ad28-41b5-8293-b96082ba9c48.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/FishBot/FileContentIndex/db878a08-b7a7-4af0-b555-c07829531aae.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/FishBot/FileContentIndex/ea651b10-6a42-471d-82dd-5340cec780bc.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/FishBot/v17/.futdcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/FishBot/v17/.futdcache.v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/FishBot/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/FishBot/v17/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/ProjectEvaluation/fishbot.metadata.v5.2" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/ProjectEvaluation/fishbot.metadata.v5.2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/ProjectEvaluation/fishbot.projects.v5.2" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/ProjectEvaluation/fishbot.projects.v5.2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FishBotMAUI/FishBotMAUI.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/FishBotMAUI/FishBotMAUI.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FishBotMAUI/FishBotMAUI.csproj.user" beforeDir="false" afterPath="$PROJECT_DIR$/FishBotMAUI/FishBotMAUI.csproj.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FishBotMAUI/Pages/FishPage.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/FishBotMAUI/Pages/FishPage.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FishBotMAUI/Platforms/Windows/Package.appxmanifest" beforeDir="false" afterPath="$PROJECT_DIR$/FishBotMAUI/Platforms/Windows/Package.appxmanifest" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FishBotMAUI/Resources/AppIcon/appicon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/FishBotMAUI/Resources/AppIcon/appicon.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FishBotMAUI/Services/FishBot/FishBotController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FishBotMAUI/Services/FishBot/FishBotController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FishBotMAUI/Services/FishBot/FishingDatabase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FishBotMAUI/Services/FishBot/FishingDatabase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FishBotMAUI/ViewModel/FishPageViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FishBotMAUI/ViewModel/FishPageViewModel.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,10 +60,6 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="KEEP" />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="mock://F:/VisualStudioRepos/FishBot/FishBotMAUI/AppShell.xaml" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://F:/VisualStudioRepos/FishBot/FishBotMAUI/ViewModel/StatusPageViewModel.cs" root0="SKIP_HIGHLIGHTING" />
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -64,7 +80,10 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "rider.run.widget.enabled.cache": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "settings.editor.selected.configurable": "preferences.sourceCode.C#",
     "vue.rearranger.settings.migration": "true"
   },
@@ -206,6 +225,7 @@
       <workItem from="1668608755261" duration="214000" />
       <workItem from="1668782207304" duration="680000" />
       <workItem from="1668782903310" duration="222000" />
+      <workItem from="1668950409441" duration="521000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <created>1655650276115</created>

@@ -50,6 +50,8 @@ namespace FishBotMAUI.Services.FishBot
                     message = "Sorry, no fish :(";
                 }
 
+                _logger.Message(message);
+
                 client.SendMessage(e.ChatMessage.Channel, message);
             }
         }

@@ -1,8 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>net6.0-maccatalyst</TargetFrameworks>
-		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net7.0-windows10.0.22621.0</TargetFrameworks>
+		<!--<TargetFrameworks>net6.0-maccatalyst</TargetFrameworks>-->
+		<TargetFramework>net7.0-windows10.0.19041.0</TargetFramework>
+		<!--<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net7.0-windows10.0.19041.0</TargetFrameworks>-->
 		<!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
 		<!-- <TargetFrameworks>$(TargetFrameworks);net6.0-tizen</TargetFrameworks> -->
 		<OutputType>Exe</OutputType>
@@ -40,11 +41,11 @@
 		<Company>Busted Bunny Productions</Company>
 		<Authors>busted_bunny</Authors>
 		<RepositoryUrl>https://github.com/bustedbunny/FishBot</RepositoryUrl>
+		<TargetFrameworks />
 	</PropertyGroup>
 
 	<ItemGroup>
 		<!-- App Icon -->
-		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
 
 		<!-- Splash Screen -->
 		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
@@ -61,7 +62,110 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\AppIcon\AppIcon.scale-100.png" />
+	  <None Remove="Resources\AppIcon\AppIcon.scale-125.png" />
+	  <None Remove="Resources\AppIcon\AppIcon.scale-150.png" />
+	  <None Remove="Resources\AppIcon\AppIcon.scale-200.png" />
+	  <None Remove="Resources\AppIcon\AppIcon.scale-400.png" />
+	  <None Remove="Resources\AppIcon\AppIcon.targetsize-16.png" />
+	  <None Remove="Resources\AppIcon\AppIcon.targetsize-16_altform-lightunplated.png" />
+	  <None Remove="Resources\AppIcon\AppIcon.targetsize-16_altform-unplated.png" />
+	  <None Remove="Resources\AppIcon\AppIcon.targetsize-24.png" />
+	  <None Remove="Resources\AppIcon\AppIcon.targetsize-24_altform-lightunplated.png" />
+	  <None Remove="Resources\AppIcon\AppIcon.targetsize-24_altform-unplated.png" />
+	  <None Remove="Resources\AppIcon\AppIcon.targetsize-256.png" />
+	  <None Remove="Resources\AppIcon\AppIcon.targetsize-256_altform-lightunplated.png" />
+	  <None Remove="Resources\AppIcon\AppIcon.targetsize-256_altform-unplated.png" />
+	  <None Remove="Resources\AppIcon\AppIcon.targetsize-32.png" />
+	  <None Remove="Resources\AppIcon\AppIcon.targetsize-32_altform-lightunplated.png" />
+	  <None Remove="Resources\AppIcon\AppIcon.targetsize-32_altform-unplated.png" />
+	  <None Remove="Resources\AppIcon\AppIcon.targetsize-48.png" />
+	  <None Remove="Resources\AppIcon\AppIcon.targetsize-48_altform-lightunplated.png" />
+	  <None Remove="Resources\AppIcon\AppIcon.targetsize-48_altform-unplated.png" />
+	  <None Remove="Resources\AppIcon\LargeTile.scale-100.png" />
+	  <None Remove="Resources\AppIcon\LargeTile.scale-125.png" />
+	  <None Remove="Resources\AppIcon\LargeTile.scale-150.png" />
+	  <None Remove="Resources\AppIcon\LargeTile.scale-200.png" />
+	  <None Remove="Resources\AppIcon\LargeTile.scale-400.png" />
+	  <None Remove="Resources\AppIcon\MediumTile.scale-100.png" />
+	  <None Remove="Resources\AppIcon\MediumTile.scale-125.png" />
+	  <None Remove="Resources\AppIcon\MediumTile.scale-150.png" />
+	  <None Remove="Resources\AppIcon\MediumTile.scale-200.png" />
+	  <None Remove="Resources\AppIcon\MediumTile.scale-400.png" />
+	  <None Remove="Resources\AppIcon\PackageLogo.scale-100.png" />
+	  <None Remove="Resources\AppIcon\PackageLogo.scale-125.png" />
+	  <None Remove="Resources\AppIcon\PackageLogo.scale-150.png" />
+	  <None Remove="Resources\AppIcon\PackageLogo.scale-200.png" />
+	  <None Remove="Resources\AppIcon\PackageLogo.scale-400.png" />
+	  <None Remove="Resources\AppIcon\SmallTile.scale-100.png" />
+	  <None Remove="Resources\AppIcon\SmallTile.scale-125.png" />
+	  <None Remove="Resources\AppIcon\SmallTile.scale-150.png" />
+	  <None Remove="Resources\AppIcon\SmallTile.scale-200.png" />
+	  <None Remove="Resources\AppIcon\SmallTile.scale-400.png" />
+	  <None Remove="Resources\AppIcon\SplashScreen.scale-100.png" />
+	  <None Remove="Resources\AppIcon\SplashScreen.scale-125.png" />
+	  <None Remove="Resources\AppIcon\SplashScreen.scale-150.png" />
+	  <None Remove="Resources\AppIcon\SplashScreen.scale-200.png" />
+	  <None Remove="Resources\AppIcon\SplashScreen.scale-400.png" />
+	  <None Remove="Resources\AppIcon\WideTile.scale-100.png" />
+	  <None Remove="Resources\AppIcon\WideTile.scale-125.png" />
+	  <None Remove="Resources\AppIcon\WideTile.scale-150.png" />
+	  <None Remove="Resources\AppIcon\WideTile.scale-200.png" />
+	  <None Remove="Resources\AppIcon\WideTile.scale-400.png" />
 	  <None Remove="Resources\Images\Sleepy.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Include="Resources\AppIcon\AppIcon.scale-100.png" />
+	  <Content Include="Resources\AppIcon\AppIcon.scale-125.png" />
+	  <Content Include="Resources\AppIcon\AppIcon.scale-150.png" />
+	  <Content Include="Resources\AppIcon\AppIcon.scale-200.png" />
+	  <Content Include="Resources\AppIcon\AppIcon.scale-400.png" />
+	  <Content Include="Resources\AppIcon\AppIcon.targetsize-16.png" />
+	  <Content Include="Resources\AppIcon\AppIcon.targetsize-16_altform-lightunplated.png" />
+	  <Content Include="Resources\AppIcon\AppIcon.targetsize-16_altform-unplated.png" />
+	  <Content Include="Resources\AppIcon\AppIcon.targetsize-24.png" />
+	  <Content Include="Resources\AppIcon\AppIcon.targetsize-24_altform-lightunplated.png" />
+	  <Content Include="Resources\AppIcon\AppIcon.targetsize-24_altform-unplated.png" />
+	  <Content Include="Resources\AppIcon\AppIcon.targetsize-256.png" />
+	  <Content Include="Resources\AppIcon\AppIcon.targetsize-256_altform-lightunplated.png" />
+	  <Content Include="Resources\AppIcon\AppIcon.targetsize-256_altform-unplated.png" />
+	  <Content Include="Resources\AppIcon\AppIcon.targetsize-32.png" />
+	  <Content Include="Resources\AppIcon\AppIcon.targetsize-32_altform-lightunplated.png" />
+	  <Content Include="Resources\AppIcon\AppIcon.targetsize-32_altform-unplated.png" />
+	  <Content Include="Resources\AppIcon\AppIcon.targetsize-48.png" />
+	  <Content Include="Resources\AppIcon\AppIcon.targetsize-48_altform-lightunplated.png" />
+	  <Content Include="Resources\AppIcon\AppIcon.targetsize-48_altform-unplated.png" />
+	  <Content Include="Resources\AppIcon\LargeTile.scale-100.png" />
+	  <Content Include="Resources\AppIcon\LargeTile.scale-125.png" />
+	  <Content Include="Resources\AppIcon\LargeTile.scale-150.png" />
+	  <Content Include="Resources\AppIcon\LargeTile.scale-200.png" />
+	  <Content Include="Resources\AppIcon\LargeTile.scale-400.png" />
+	  <Content Include="Resources\AppIcon\MediumTile.scale-100.png" />
+	  <Content Include="Resources\AppIcon\MediumTile.scale-125.png" />
+	  <Content Include="Resources\AppIcon\MediumTile.scale-150.png" />
+	  <Content Include="Resources\AppIcon\MediumTile.scale-200.png" />
+	  <Content Include="Resources\AppIcon\MediumTile.scale-400.png" />
+	  <Content Include="Resources\AppIcon\PackageLogo.scale-100.png" />
+	  <Content Include="Resources\AppIcon\PackageLogo.scale-125.png" />
+	  <Content Include="Resources\AppIcon\PackageLogo.scale-150.png" />
+	  <Content Include="Resources\AppIcon\PackageLogo.scale-200.png" />
+	  <Content Include="Resources\AppIcon\PackageLogo.scale-400.png" />
+	  <Content Include="Resources\AppIcon\SmallTile.scale-100.png" />
+	  <Content Include="Resources\AppIcon\SmallTile.scale-125.png" />
+	  <Content Include="Resources\AppIcon\SmallTile.scale-150.png" />
+	  <Content Include="Resources\AppIcon\SmallTile.scale-200.png" />
+	  <Content Include="Resources\AppIcon\SmallTile.scale-400.png" />
+	  <Content Include="Resources\AppIcon\SplashScreen.scale-100.png" />
+	  <Content Include="Resources\AppIcon\SplashScreen.scale-125.png" />
+	  <Content Include="Resources\AppIcon\SplashScreen.scale-150.png" />
+	  <Content Include="Resources\AppIcon\SplashScreen.scale-200.png" />
+	  <Content Include="Resources\AppIcon\SplashScreen.scale-400.png" />
+	  <Content Include="Resources\AppIcon\WideTile.scale-100.png" />
+	  <Content Include="Resources\AppIcon\WideTile.scale-125.png" />
+	  <Content Include="Resources\AppIcon\WideTile.scale-150.png" />
+	  <Content Include="Resources\AppIcon\WideTile.scale-200.png" />
+	  <Content Include="Resources\AppIcon\WideTile.scale-400.png" />
 	</ItemGroup>
 
 	<ItemGroup>

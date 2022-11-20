@@ -5,50 +5,12 @@ using System.Collections.ObjectModel;
 namespace FishBot;
 
 
-public enum DeserizationResult
-{
-    Success,
-    NoFile,
-    FileIsNull,
-    Empty
-}
-public static class FishingDatabaseUtility
-{
-    public static DeserizationResult LoadDatabase(this ICollection<FishRecord> fishList, string filePath)
-    {
-        if (File.Exists(filePath))
-        {
-            var rawJson = File.ReadAllText(filePath);
-            var data = JsonConvert.DeserializeObject(rawJson, fishList.GetType()) as ICollection<FishRecord>;
-
-            if (data != null)
-            {
-                if (data.Count == 0)
-                {
-                    return DeserizationResult.Empty;
-                }
-
-                fishList.Clear();
-
-                foreach (var item in data)
-                {
-                    fishList.Add(item);
-                }
-
-                return DeserizationResult.Success;
-            }
-            return DeserizationResult.FileIsNull;
-        }
-        return DeserizationResult.NoFile;
-    }
-}
-
-
 [Serializable]
 public class FishingDatabase
 {
-    private readonly string DatabaseName = "FishDatabase.json";
-    private readonly string DatabasePath;
+    public readonly string DatabaseName = "FishDatabase.json";
+    public readonly string DatabasePath;
+    public readonly string DatabaseFolder;
     private readonly Logger _logger;
 
 
@@ -58,11 +20,18 @@ public class FishingDatabase
     {
         _logger = logger;
 
+
+
+
+        //DatabasePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "FishBot");
+        //DatabasePath = Path.Combine(DatabasePath, DatabaseName);
+
+        DatabaseFolder = FileSystem.AppDataDirectory;
+
         DatabasePath = Path.Combine(FileSystem.AppDataDirectory, DatabaseName);
 
-#if DEBUG
+
         _logger.Message(DatabasePath);
-#endif
 
         if (File.Exists(DatabasePath))
         {
@@ -76,6 +45,9 @@ public class FishingDatabase
             Content = new();
 
             _logger.Message("No database found, creating new empty.");
+
+
+
         }
     }
 
@@ -109,5 +81,22 @@ public class FishingDatabase
         _version++;
 
         Save();
+    }
+
+    public void RemoveRecord(string name)
+    {
+        for (int i = 0; i < Content.Count; i++)
+        {
+            if (Content[i].Name.Equals(name))
+            {
+                Content.RemoveAt(i);
+                _logger.Message($"Removing fish named '{name}'.");
+                return;
+            }
+        }
+    }
+    public void RemoveRecord(FishRecord record)
+    {
+        Content.Remove(record);
     }
 }

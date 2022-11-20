@@ -1,15 +1,8 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using FishBot;
-using FishBotMAUI.Pages;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FishBotMAUI.ViewModel
 {
@@ -19,13 +12,13 @@ namespace FishBotMAUI.ViewModel
         public FishPageViewModel(FishingDatabase fishingDatabase)
         {
             _database = fishingDatabase;
-            fishList = fishingDatabase.Content;
+            _fishList = fishingDatabase.Content;
         }
 
         [ObservableProperty]
-        private string entryName;
+        private string _entryName;
         [ObservableProperty]
-        private float entryProbability;
+        private float _entryProbability;
 
         [RelayCommand]
         private async void AddFish()
@@ -38,13 +31,36 @@ namespace FishBotMAUI.ViewModel
 
             _database.AddRecord(EntryName, EntryProbability);
         }
+        [RelayCommand]
+        private void RemoveFish(FishRecord fishRecord)
+        {
+            _database.RemoveRecord(fishRecord);
+        }
 
+
+        [RelayCommand]
+        private void OpenDatabaseFolder()
+        {
+
+            ProcessStartInfo lPsi = new()
+            {
+                FileName = "explorer",
+                Arguments = string.Format("/root,{0}", _database.DatabaseFolder),
+                UseShellExecute = true
+            };
+
+            Process lNewProcess = new()
+            {
+                StartInfo = lPsi
+            };
+            lNewProcess.Start();
+        }
 
         [ObservableProperty]
-        ObservableCollection<FishRecord> fishList = new();
+        ObservableCollection<FishRecord> _fishList = new();
 
 
-        [ObservableProperty] private string defaultFishName = "Goldfish";
-        [ObservableProperty] private string fishPageTitle = "Fish list";
+        [ObservableProperty] private string _defaultFishName = "Goldfish";
+        [ObservableProperty] private string _fishPageTitle = "Fish list";
     }
 }
